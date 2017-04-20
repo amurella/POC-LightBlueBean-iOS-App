@@ -25,6 +25,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     var displayTime: Bool = false
     var newLine: String = ""
     var csvText = ""
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -248,6 +249,15 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
         sendSerialData(beanState: data)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "transferToEmail"
+        {
+            let emailViewController = segue.destination as? EmailViewController
+            emailViewController?.csvText = csvText
+        }
     }
     
 }

@@ -91,6 +91,7 @@
                                 <state key="normal" title="Save Data"/>
                                 <connections>
                                     <action selector="saveData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NVd-He-cqy"/>
+                                    <segue destination="4Mf-Ye-wa7" kind="presentation" identifier="transferToEmail" id="VxN-LU-beR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,6 +107,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-95.200000000000003" y="-26.53673163418291"/>
+        </scene>
+        <!--Email View Controller-->
+        <scene sceneID="KOd-vX-a8I">
+            <objects>
+                <viewController id="4Mf-Ye-wa7" customClass="EmailViewController" customModule="BeanDemoConnection" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wDi-Iy-V1R"/>
+                        <viewControllerLayoutGuide type="bottom" id="6ai-4x-OHT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Ra-dv-hha">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmq-Sv-fwO">
+                                <rect key="frame" x="151" y="302" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Email Data"/>
+                                <connections>
+                                    <action selector="exportCSV:" destination="4Mf-Ye-wa7" eventType="touchUpInside" id="8P4-4c-UV5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AtC-il-Cuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="-25"/>
         </scene>
     </scenes>
 </document>

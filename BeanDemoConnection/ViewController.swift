@@ -15,9 +15,16 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     @IBOutlet weak var valueFromBean: UILabel!
     @IBOutlet weak var ledTextLabel: UILabel!
     var beanManager: PTDBeanManager!
+    
+    @IBOutlet weak var timeTaken: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     var myBean: PTDBean!
     var lightState: Bool = false
-    var startReading: Bool = false
+    var startReading: Bool = true
+    var stopReading: Bool = false
+    var displayTime: Bool = false
+    var newLine: String = ""
+    var csvText = ""
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -27,6 +34,8 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         super.viewDidLoad()
         beanManager = PTDBeanManager()
         beanManager!.delegate = self
+        lightState = false
+        //make the csv up here
     }
     
     
@@ -102,8 +111,9 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     
     @IBAction func pressValueToStartReading(_ sender: Any)
     {
+    
         startReading = true
-        let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
+        let data = NSData(bytes: &startReading, length: MemoryLayout<Bool>.size)
         sendSerialData(beanState: data)
         print ("HI")
     }
@@ -117,7 +127,11 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     {
         print(myBean)
         print("bye")
-        myBean?.sendSerialData(beanState as Data!)
+        //while(lightState == true)
+        //{
+            myBean?.sendSerialData(beanState as Data!)
+        //}
+        //myBean?.sendSerialData(beanState as Data!)
         print("sent over serial data")
     }
     
@@ -130,7 +144,35 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         }
         
         var stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue) as! String
-        valueFromBean.text? += stringData
+        if(stringData == "Finished Calculating Value")
+        {
+            displayTime = true
+          //  var stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue) as! String
+          //  timeTaken.text? = stringData
+        }
+        else if(stringData == "Done")
+        {
+            //put a new line into the csv
+        }
+        else
+        {
+            newLine += stringData + ","
+            if(displayTime == true)
+            {
+                timeTaken.text? = stringData
+                newLine += "\n"
+                csvText.append(newLine)
+                //WHEN THEY CLICK SAVE WRITE THE FILE TO THE PATH WE CREATED then send data over to next view controller to export
+                displayTime = false
+            }
+            else
+            {
+                valueFromBean.text? = stringData
+            }
+          
+            
+        }
+       
         //var fullString : String = valueFromBean.text!
         
        // valueFromBean.scrollRangeToVisible(NSMakeRange(count(valueFromBean.string!),0))
@@ -167,14 +209,45 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         [self.consoleOutputTextView scrollRangeToVisible: NSMakeRange(self.consoleOutputTextView.string.length, 0)];*/
     }
     
-    @IBAction func pressButtonToChangeValue(_ sender: Any)
+    @IBAction func saveData(_ sender: Any)
     {
-        lightState = !lightState
+        let fileName = "TimeData.csv"
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
         
-        let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
-        sendSerialData(beanState: data)
-        updateLedStatusText(lightState: lightState)
+        do
+        {
+            try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+            print(csvText)
+        }
+        catch
+        {
+            print("File creating failed")
+            print("\(error)")
+        }
     }
     
+    @IBAction func pressButtonToChangeValue(_ sender: Any)
+    {
+        newLine = ""
+        print ("hi")
+        lightState = true
+        //while (stopReading == false)
+     //   {
+            print("wasup betches")
+            let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
+            sendSerialData(beanState: data)
+            updateLedStatusText(lightState: lightState)
+       // }
+        
+    }
+    
+    @IBAction func stopReadingBean(_ sender: Any)
+    {
+        lightState = false
+        print("debugging")
+        let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
+        sendSerialData(beanState: data)
+        
+    }
     
 }

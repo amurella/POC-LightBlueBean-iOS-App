@@ -234,7 +234,6 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         lightState = true
         //while (stopReading == false)
      //   {
-            print("wasup betches")
             let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
             sendSerialData(beanState: data)
             updateLedStatusText(lightState: lightState)

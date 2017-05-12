@@ -13,7 +13,6 @@ import CoreBluetooth
 class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate {
 
     @IBOutlet weak var valueFromBean: UILabel!
-    @IBOutlet weak var ledTextLabel: UILabel!
     var beanManager: PTDBeanManager!
     
     @IBOutlet weak var timeTaken: UILabel!
@@ -109,20 +108,6 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         
     }*/
     
-    
-    @IBAction func pressValueToStartReading(_ sender: Any)
-    {
-    
-        startReading = true
-        let data = NSData(bytes: &startReading, length: MemoryLayout<Bool>.size)
-        sendSerialData(beanState: data)
-        print ("HI")
-    }
-    func updateLedStatusText(lightState: Bool)
-    {
-        let onOffText = lightState ? "ON": "OFF"
-        ledTextLabel.text = "Led is: \(onOffText)"
-    }
     
     func sendSerialData(beanState: NSData)
     {
@@ -237,7 +222,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
             print("wasup betches")
             let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
             sendSerialData(beanState: data)
-            updateLedStatusText(lightState: lightState)
+         //   updateLedStatusText(lightState: lightState)
        // }
         
     }

@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		CD3EEC931EA8979800D232C9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EEC921EA8979800D232C9 /* EmailViewController.swift */; };
 		CD74DC751EA33183009BC654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD74DC741EA33183009BC654 /* ViewController.swift */; };
-		CD74DC9A1EA33C4A009BC654 /* Bean_iOS_OSX_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD74DC991EA33C4A009BC654 /* Bean_iOS_OSX_SDK.framework */; };
-		CD74DC9B1EA33C4D009BC654 /* Pods_BeanDemoConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B41B99C99A166085FC2B75 /* Pods_BeanDemoConnection.framework */; };
 		CD8F070E1E80E073008456F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F070D1E80E073008456F5 /* AppDelegate.swift */; };
 		CD8F07131E80E073008456F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F07111E80E073008456F5 /* Main.storyboard */; };
 		CD8F07151E80E073008456F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8F07141E80E073008456F5 /* Assets.xcassets */; };
 		CD8F07181E80E073008456F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F07161E80E073008456F5 /* LaunchScreen.storyboard */; };
-		CD8F07231E80E073008456F5 /* BeanDemoConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F07221E80E073008456F5 /* BeanDemoConnectionTests.swift */; };
 		CD8F072E1E80E073008456F5 /* BeanDemoConnectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F072D1E80E073008456F5 /* BeanDemoConnectionUITests.swift */; };
+		CD9691FB1EC285430018591B /* Pods_BeanDemoConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B41B99C99A166085FC2B75 /* Pods_BeanDemoConnection.framework */; };
+		CD9691FC1EC285430018591B /* Pods_BeanDemoConnection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52B41B99C99A166085FC2B75 /* Pods_BeanDemoConnection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CD9691FD1EC285430018591B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD9691FC1EC285430018591B /* Pods_BeanDemoConnection.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		00498E95C08D2727D94F5B64 /* Pods-BeanDemoConnection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeanDemoConnection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeanDemoConnection/Pods-BeanDemoConnection.debug.xcconfig"; sourceTree = "<group>"; };
 		52B41B99C99A166085FC2B75 /* Pods_BeanDemoConnection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeanDemoConnection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +65,6 @@
 		CD8F07171E80E073008456F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD8F07191E80E073008456F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F071E1E80E073008456F5 /* BeanDemoConnectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeanDemoConnectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD8F07221E80E073008456F5 /* BeanDemoConnectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanDemoConnectionTests.swift; sourceTree = "<group>"; };
 		CD8F07241E80E073008456F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F07291E80E073008456F5 /* BeanDemoConnectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeanDemoConnectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8F072D1E80E073008456F5 /* BeanDemoConnectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanDemoConnectionUITests.swift; sourceTree = "<group>"; };
@@ -66,8 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD74DC9B1EA33C4D009BC654 /* Pods_BeanDemoConnection.framework in Frameworks */,
-				CD74DC9A1EA33C4A009BC654 /* Bean_iOS_OSX_SDK.framework in Frameworks */,
+				CD9691FB1EC285430018591B /* Pods_BeanDemoConnection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +148,6 @@
 		CD8F07211E80E073008456F5 /* BeanDemoConnectionTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD8F07221E80E073008456F5 /* BeanDemoConnectionTests.swift */,
 				CD8F07241E80E073008456F5 /* Info.plist */,
 			);
 			path = BeanDemoConnectionTests;
@@ -177,6 +187,7 @@
 				CD8F07081E80E073008456F5 /* Resources */,
 				D7A489073F2941F1419983C0 /* [CP] Embed Pods Frameworks */,
 				C64A7B194DA43D4638CC69D8 /* [CP] Copy Pods Resources */,
+				CD9691FD1EC285430018591B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -362,7 +373,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8F07231E80E073008456F5 /* BeanDemoConnectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -60,6 +60,12 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
         emailController.addAttachmentData(data, mimeType: "text/csv", fileName: "TimeData.csv")
         return emailController
     }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+        //pop up with notification saying "your message has been sent!"
+    }
+
 
     /*
     // MARK: - Navigation

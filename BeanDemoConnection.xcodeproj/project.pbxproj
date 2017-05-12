@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD2FE5691EC55CD00041D1B4 /* IDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2FE5681EC55CD00041D1B4 /* IDViewController.swift */; };
 		CD3EEC931EA8979800D232C9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EEC921EA8979800D232C9 /* EmailViewController.swift */; };
 		CD74DC751EA33183009BC654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD74DC741EA33183009BC654 /* ViewController.swift */; };
 		CD8F070E1E80E073008456F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F070D1E80E073008456F5 /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		00498E95C08D2727D94F5B64 /* Pods-BeanDemoConnection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeanDemoConnection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeanDemoConnection/Pods-BeanDemoConnection.debug.xcconfig"; sourceTree = "<group>"; };
 		52B41B99C99A166085FC2B75 /* Pods_BeanDemoConnection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeanDemoConnection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2001CB4B08CC22826B9DC61 /* Pods-BeanDemoConnection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeanDemoConnection.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeanDemoConnection/Pods-BeanDemoConnection.release.xcconfig"; sourceTree = "<group>"; };
+		CD2FE5681EC55CD00041D1B4 /* IDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDViewController.swift; sourceTree = "<group>"; };
 		CD3EEC921EA8979800D232C9 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		CD74DC741EA33183009BC654 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD74DC761EA33986009BC654 /* Bean_iOS_OSX_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bean_iOS_OSX_SDK.framework; path = "Pods/../build/Debug-iphoneos/Bean-iOS-OSX-SDK/Bean_iOS_OSX_SDK.framework"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				CD8F070D1E80E073008456F5 /* AppDelegate.swift */,
 				CD74DC741EA33183009BC654 /* ViewController.swift */,
+				CD2FE5681EC55CD00041D1B4 /* IDViewController.swift */,
 				CD3EEC921EA8979800D232C9 /* EmailViewController.swift */,
 				CD8F07111E80E073008456F5 /* Main.storyboard */,
 				CD8F07141E80E073008456F5 /* Assets.xcassets */,
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD74DC751EA33183009BC654 /* ViewController.swift in Sources */,
+				CD2FE5691EC55CD00041D1B4 /* IDViewController.swift in Sources */,
 				CD3EEC931EA8979800D232C9 /* EmailViewController.swift in Sources */,
 				CD8F070E1E80E073008456F5 /* AppDelegate.swift in Sources */,
 			);

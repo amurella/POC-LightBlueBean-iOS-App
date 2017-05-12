@@ -14,7 +14,9 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
 
     @IBOutlet weak var valueFromBean: UILabel!
     var beanManager: PTDBeanManager!
-    
+    var userID: String = ""
+    var maxValue: String = " "
+    var dateString: String = " "
     @IBOutlet weak var timeTaken: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     var myBean: PTDBean!
@@ -22,6 +24,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     var startReading: Bool = true
     var stopReading: Bool = false
     var displayTime: Bool = false
+    var lastValue: Bool = false
     var newLine: String = ""
     var csvText = ""
   
@@ -130,7 +133,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         }
         
         var stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue) as! String
-        if(stringData == "Finished Calculating Value")
+        if(stringData == "The time is")
         {
             displayTime = true
           //  var stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue) as! String
@@ -140,10 +143,19 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         {
             //put a new line into the csv
         }
+        else if(stringData == "Finished Calculating Value")
+        {
+            lastValue = true
+        }
         else
         {
             newLine += stringData + ","
-            if(displayTime == true)
+            if(lastValue == true)
+            {
+                maxValue = stringData
+                lastValue = false
+            }
+            else if(displayTime == true)
             {
                 timeTaken.text? = stringData
                 newLine += "\n"
@@ -241,7 +253,15 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         {
             let emailViewController = segue.destination as? EmailViewController
             emailViewController?.csvText = csvText
+            print(userID)
+            emailViewController?.userIDString = userID
+            emailViewController?.mPML = maxValue
+            emailViewController?.dTL = dateString
+            print(emailViewController?.userIDString)
         }
     }
     
 }
+
+
+

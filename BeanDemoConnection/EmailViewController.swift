@@ -11,14 +11,23 @@ import MessageUI
 class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     
+    @IBOutlet weak var dateTimeLabel: UILabel!
+    var dTL: String = " "
+    @IBOutlet weak var moleculesPerMicroL: UILabel!
+    var mPML: String = " "
+    @IBOutlet weak var userID: UILabel!
+    var userIDString: String = " "
     var csvText : String = " "
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userID.text = userIDString
+        moleculesPerMicroL.text = mPML
+        dateTimeLabel.text = dTL
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -67,6 +76,15 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
     }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "backToTest"
+        {
+            let controller = segue.destination as! ViewController
+            controller.userID = userID.text!
+            print(userID.text)
+        }
+    }
     /*
     // MARK: - Navigation
 

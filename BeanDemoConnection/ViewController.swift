@@ -18,7 +18,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     var maxValue: String = " "
     var dateString: String = " "
     @IBOutlet weak var timeTaken: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var testProgressLabel: UILabel!
     var myBean: PTDBean!
     var lightState: Bool = false
     var startReading: Bool = true
@@ -157,6 +157,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
             }
             else if(displayTime == true)
             {
+                testProgressLabel.text = "Test is completed."
                 timeTaken.text? = stringData
                 newLine += "\n"
                 csvText.append(newLine)
@@ -226,6 +227,8 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     
     @IBAction func pressButtonToChangeValue(_ sender: Any)
     {
+        testProgressLabel.text = "Test is in Progress. Please Wait."
+        print(testProgressLabel.text)
         newLine = ""
         print ("hi")
         lightState = true

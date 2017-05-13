@@ -32,6 +32,11 @@ class IDViewController: UIViewController {
 
     
         dateAndTimeLabel.text = result
+        
+        let border = CALayer()
+        let width = CGFloat(3.0)
+        border.borderWidth = width
+        userID.layer.addSublayer(border)
         // Do any additional setup after loading the view.
     }
 

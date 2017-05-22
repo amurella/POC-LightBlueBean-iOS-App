@@ -24,6 +24,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CD150A151ED2B9B700E267A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD150A101ED2B9B600E267A4 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		CD150A171ED2B9B700E267A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD150A101ED2B9B600E267A4 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
 		CD8F071F1E80E073008456F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CD8F07021E80E073008456F5 /* Project object */;
@@ -60,6 +74,7 @@
 		C2001CB4B08CC22826B9DC61 /* Pods-BeanDemoConnection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeanDemoConnection.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeanDemoConnection/Pods-BeanDemoConnection.release.xcconfig"; sourceTree = "<group>"; };
 		CD150A0C1ED2AF9E00E267A4 /* Screen Shot 2017-05-21 at 10.16.27 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-05-21 at 10.16.27 PM.png"; sourceTree = "<group>"; };
 		CD150A0E1ED2B08D00E267A4 /* lbb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lbb.png; sourceTree = "<group>"; };
+		CD150A101ED2B9B600E267A4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CD2FE5681EC55CD00041D1B4 /* IDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDViewController.swift; sourceTree = "<group>"; };
 		CD2FE56A1EC6CCF60041D1B4 /* asu_university_horiz_rgb_maroongold_600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asu_university_horiz_rgb_maroongold_600.png; sourceTree = "<group>"; };
 		CD3EEC921EA8979800D232C9 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
@@ -118,12 +133,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD150A111ED2B9B600E267A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD150A161ED2B9B700E267A4 /* Charts.framework */,
+				CD150A181ED2B9B700E267A4 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CD8F07011E80E073008456F5 = {
 			isa = PBXGroup;
 			children = (
 				CD74DC911EA33BA7009BC654 /* Bean_iOS_OSX_SDK.framework */,
 				CD8F070C1E80E073008456F5 /* BeanDemoConnection */,
 				CD8F07211E80E073008456F5 /* BeanDemoConnectionTests */,
+				CD150A101ED2B9B600E267A4 /* Charts.xcodeproj */,
 				CD8F072C1E80E073008456F5 /* BeanDemoConnectionUITests */,
 				CD8F070B1E80E073008456F5 /* Products */,
 				AD029075EA3B88945F08C2C2 /* Pods */,
@@ -289,6 +314,12 @@
 			mainGroup = CD8F07011E80E073008456F5;
 			productRefGroup = CD8F070B1E80E073008456F5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CD150A111ED2B9B600E267A4 /* Products */;
+					ProjectRef = CD150A101ED2B9B600E267A4 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CD8F07091E80E073008456F5 /* BeanDemoConnection */,
@@ -297,6 +328,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CD150A161ED2B9B700E267A4 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = CD150A151ED2B9B700E267A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD150A181ED2B9B700E267A4 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = CD150A171ED2B9B700E267A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CD8F07081E80E073008456F5 /* Resources */ = {

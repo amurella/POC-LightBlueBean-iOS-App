@@ -12,6 +12,7 @@ import CoreBluetooth
 
 class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate {
 
+    @IBOutlet weak var percentUpdate: UILabel!
     @IBOutlet weak var valueFromBean: UILabel!
     var beanManager: PTDBeanManager!
     var userID: String = ""
@@ -148,6 +149,23 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         }
         else
         {
+           /* var onlyDigits: CharacterSet = CharacterSet.decimalDigits.inverted
+            if stringData.rangeOfCharacter(from: onlyDigits) != nil
+            {
+                let newValue = (Int(stringData)! / 1000) * 100
+                percentUpdate.text = String(newValue)
+            }*/
+            
+            let numbers = NSCharacterSet(charactersIn: "0123456789.").inverted
+            
+            if stringData.rangeOfCharacter(from: numbers) == nil
+            {
+                let newValue = (Double(stringData)! / 1000.0) * 100
+                print("HIIII")
+                print(newValue)
+                percentUpdate.text = String(newValue)
+            }
+            
             newLine += stringData + ","
             if(lastValue == true)
             {

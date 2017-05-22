@@ -85,7 +85,6 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         #endif
     }
     
- 
     
     
    

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD150A0D1ED2AF9E00E267A4 /* Screen Shot 2017-05-21 at 10.16.27 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = CD150A0C1ED2AF9E00E267A4 /* Screen Shot 2017-05-21 at 10.16.27 PM.png */; };
+		CD150A0F1ED2B08D00E267A4 /* lbb.png in Resources */ = {isa = PBXBuildFile; fileRef = CD150A0E1ED2B08D00E267A4 /* lbb.png */; };
 		CD2FE5691EC55CD00041D1B4 /* IDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2FE5681EC55CD00041D1B4 /* IDViewController.swift */; };
 		CD2FE56B1EC6CCF60041D1B4 /* asu_university_horiz_rgb_maroongold_600.png in Resources */ = {isa = PBXBuildFile; fileRef = CD2FE56A1EC6CCF60041D1B4 /* asu_university_horiz_rgb_maroongold_600.png */; };
 		CD3EEC931EA8979800D232C9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EEC921EA8979800D232C9 /* EmailViewController.swift */; };
@@ -18,6 +20,7 @@
 		CD8F072E1E80E073008456F5 /* BeanDemoConnectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F072D1E80E073008456F5 /* BeanDemoConnectionUITests.swift */; };
 		CD9691FB1EC285430018591B /* Pods_BeanDemoConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B41B99C99A166085FC2B75 /* Pods_BeanDemoConnection.framework */; };
 		CD9691FC1EC285430018591B /* Pods_BeanDemoConnection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52B41B99C99A166085FC2B75 /* Pods_BeanDemoConnection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CDF4C94B1ED289F8002A36D6 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4C94A1ED289F8002A36D6 /* ConnectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,8 @@
 		00498E95C08D2727D94F5B64 /* Pods-BeanDemoConnection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeanDemoConnection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeanDemoConnection/Pods-BeanDemoConnection.debug.xcconfig"; sourceTree = "<group>"; };
 		52B41B99C99A166085FC2B75 /* Pods_BeanDemoConnection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeanDemoConnection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2001CB4B08CC22826B9DC61 /* Pods-BeanDemoConnection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeanDemoConnection.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeanDemoConnection/Pods-BeanDemoConnection.release.xcconfig"; sourceTree = "<group>"; };
+		CD150A0C1ED2AF9E00E267A4 /* Screen Shot 2017-05-21 at 10.16.27 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-05-21 at 10.16.27 PM.png"; sourceTree = "<group>"; };
+		CD150A0E1ED2B08D00E267A4 /* lbb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lbb.png; sourceTree = "<group>"; };
 		CD2FE5681EC55CD00041D1B4 /* IDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDViewController.swift; sourceTree = "<group>"; };
 		CD2FE56A1EC6CCF60041D1B4 /* asu_university_horiz_rgb_maroongold_600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asu_university_horiz_rgb_maroongold_600.png; sourceTree = "<group>"; };
 		CD3EEC921EA8979800D232C9 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		CD8F072F1E80E073008456F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F07421E80E870008456F5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		CD8F07441E80E87B008456F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CDF4C94A1ED289F8002A36D6 /* ConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +148,11 @@
 				CD74DC741EA33183009BC654 /* ViewController.swift */,
 				CD2FE56A1EC6CCF60041D1B4 /* asu_university_horiz_rgb_maroongold_600.png */,
 				CD2FE5681EC55CD00041D1B4 /* IDViewController.swift */,
+				CDF4C94A1ED289F8002A36D6 /* ConnectionViewController.swift */,
 				CD3EEC921EA8979800D232C9 /* EmailViewController.swift */,
+				CD150A0E1ED2B08D00E267A4 /* lbb.png */,
 				CD8F07111E80E073008456F5 /* Main.storyboard */,
+				CD150A0C1ED2AF9E00E267A4 /* Screen Shot 2017-05-21 at 10.16.27 PM.png */,
 				CD8F07141E80E073008456F5 /* Assets.xcassets */,
 				CD8F07161E80E073008456F5 /* LaunchScreen.storyboard */,
 				CD8F07191E80E073008456F5 /* Info.plist */,
@@ -294,9 +303,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD150A0F1ED2B08D00E267A4 /* lbb.png in Resources */,
 				CD8F07181E80E073008456F5 /* LaunchScreen.storyboard in Resources */,
 				CD8F07151E80E073008456F5 /* Assets.xcassets in Resources */,
 				CD8F07131E80E073008456F5 /* Main.storyboard in Resources */,
+				CD150A0D1ED2AF9E00E267A4 /* Screen Shot 2017-05-21 at 10.16.27 PM.png in Resources */,
 				CD2FE56B1EC6CCF60041D1B4 /* asu_university_horiz_rgb_maroongold_600.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +383,7 @@
 			files = (
 				CD74DC751EA33183009BC654 /* ViewController.swift in Sources */,
 				CD2FE5691EC55CD00041D1B4 /* IDViewController.swift in Sources */,
+				CDF4C94B1ED289F8002A36D6 /* ConnectionViewController.swift in Sources */,
 				CD3EEC931EA8979800D232C9 /* EmailViewController.swift in Sources */,
 				CD8F070E1E80E073008456F5 /* AppDelegate.swift in Sources */,
 			);

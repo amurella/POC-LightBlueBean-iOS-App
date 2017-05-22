@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Bean_iOS_OSX_SDK
+import CoreBluetooth
 
-class IDViewController: UIViewController {
+class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate  {
 
     @IBOutlet weak var userID: UITextField!
+  //  var beanManager: PTDBeanManager!
+   // var myBean: PTDBean!
     
     @IBOutlet weak var dateAndTimeLabel: UILabel!
     override func viewDidLoad()
@@ -52,6 +56,7 @@ class IDViewController: UIViewController {
                 let controller = segue.destination as! ViewController
                 controller.userID = userID.text!
                 controller.dateString = dateAndTimeLabel.text!
+                //controller.myBean = myBean
                 print(dateAndTimeLabel.text)
         }
     }

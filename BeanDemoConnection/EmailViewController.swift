@@ -83,6 +83,7 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
             let controller = segue.destination as! ViewController
             controller.userID = userID.text!
             print(userID.text)
+            controller.dateString = dateTimeLabel.text!
         }
     }
     /*
